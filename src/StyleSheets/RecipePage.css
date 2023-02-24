@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia;
+}
+
+.recipe-page-container {
+    padding-top: 2rem;
+    max-width: 80vw;
+    margin: auto;
+}
+
+.header-info {
+    width: 80vw;
+    align-items: center;
+    text-align: center;
+}
+
+
+h1 {
+    text-align: left;
+    margin-left: 1rem;
+}
+
+.contributor {
+    text-align: left;
+    margin-left: 1.3rem;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.icons {
+    text-align: right;
+}
+
+.icon {
+    margin-left: .5rem;
+    color: #2A8C82;
+}
+
+.img-container {
+    padding-bottom: 0;
+}
+
+img {
+    display: block;
+    padding-bottom: 0rem;
+    height: auto;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.summary {
+    font-family: Segoe UI;
+    font-weight: normal;
+    font-size: 18px;
+    padding-top: 1rem;
+}
+
+.stack {
+    display: flex;
+    flex-direction: column;
+}
+
+
+h3 {
+    padding-top: 2rem;
+    margin-bottom: 0;
+}
+
+.ingredients {
+    padding-top: 1rem;
+}
+
+.steps-container {
+    padding-bottom: 2rem;
+}
+
+.steps {
+    margin-top: 1rem;
+    text-decoration: none;
+    list-style: none;
+    font-weight: normal;
+}
+
+/* MODAL STYLE */
+.modal-header {
+    background-color: #2A8C82;
+    color: white;
+    font-family: Prata;
+    font-weight: bolder;
+    border: none;
+}
+
+.modal-body {
+    background-color: #a3ecdf;
+    color: #024059;
+    border: none;
+}
+
+.form-control {
+    background-color: #FFFCE6;
+}
+
+.modal-footer {
+    background-color: #401F1F;
+    border: none;
+}
+
+#footer {
+    background-color: #025159;
+    border: none;
+}
+
+#close-btn {
+    background-color: lightgray;
+    color: #024059;
+    border: none;
+}
+
+#submit-btn {
+    background-color: #2A8C82;
+    border: none;
+    color: white;
+}
+
+/*
+gray-ish mauve: #8C516D
+purple-pink: #D97EB0; 
+medium yellow: #F2CA80
+sand yellow: #F2BF80
+bright warm brown: #BF6836 
+
+bright med mint green: #18D9B5 
+ultra bright mint-green: #9BF2EA 
+light-ish slight blue-green: #41BFB3 
+saturated blue-green: #2A8C82 
+dark purple: #260101 
+dull forest green: #275950
+lighter mint green: #66D9CD 
+dark blue-green: #025159 
+navy blue: #024059
+med mustard yellow: #D9923B 
+dusty med pink: #BF726B 
+dark brick red: #401F1F 
+dark forest green: #075951 
+
+*/

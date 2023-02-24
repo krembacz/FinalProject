@@ -1,0 +1,54 @@
+.center {
+    margin-top: 1rem;
+    padding: 3rem;
+    padding-left: .3rem;
+    padding-right: .3rem;
+}
+
+.cards-container {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 3;
+    margin-top: 1rem;
+}
+
+.featured-container {
+    padding-top: 2rem;
+}
+
+.featured-header {
+    background-color: #9BF2EA;
+    color: #024059;
+    font-family: Helevetica;
+    font-weight: bolder;
+    font-size: 3vw;
+    padding: 1.5rem;
+    width: 67vw;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/*
+gray-ish mauve: #8C516D
+purple-pink: #D97EB0; 
+medium yellow: #F2CA80
+sand yellow: #F2BF80
+bright warm brown: #BF6836 
+
+bright med mint green: #18D9B5 
+ultra bright mint-green: #9BF2EA 
+light-ish slight blue-green: #41BFB3 
+saturated blue-green: #2A8C82 
+dark purple: #260101 
+dull forest green: #275950
+lighter mint green: #66D9CD 
+dark blue-green: #025159 
+navy blue: #024059
+med mustard yellow: #D9923B 
+dusty med pink: #BF726B 
+dark brick red: #401F1F 
+dark forest green: #075951 
+
+*/

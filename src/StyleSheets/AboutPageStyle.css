@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.what {
+    padding: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+    margin: 0 auto;
+}
+
+.allergies {
+    padding: 1.5rem;
+    padding-top: 0;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+}
+
+.allergy-header {
+    background-color: #9BF2EA;
+    color: #024059;
+    font-weight: bolder;
+    font-size: 1.8vh;
+    padding: 1.5rem;
+    max-width: 70%;
+    margin-top: 2=1.5rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    font-family: Garamond;
+    font-size: 2.1vh;
+}
+
+.why {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    display: flex;
+    margin-bottom: 0;
+}
+
+.why-header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    margin-bottom: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #18D9B5;
+    color: #024059;
+    font-size: 20px;
+}
+
+.why-text {
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+}
+
+.text {
+    text-align: left;
+    padding: 4.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.img-container {
+    width: 40%;
+    padding: 6rem;
+    padding-top: 0;
+}
+
+#why-img {
+    max-width: 400px;
+}
+
+
+/*
+gray-ish mauve: #8C516D
+purple-pink: #D97EB0; 
+medium yellow: #F2CA80
+sand yellow: #F2BF80
+bright warm brown: #BF6836 
+
+bright med mint green: #18D9B5 
+ultra bright mint-green: #9BF2EA 
+light-ish slight blue-green: #41BFB3 
+saturated blue-green: #2A8C82 
+dark purple: #260101 
+dull forest green: #275950
+lighter mint green: #66D9CD 
+dark blue-green: #025159 
+navy blue: #024059
+med mustard yellow: #D9923B 
+dusty med pink: #BF726B 
+dark brick red: #401F1F 
+dark forest green: #075951 
+
+*/

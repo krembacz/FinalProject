@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Segoe UI;
+    font-size: 17px;
+}
+
+.div {
+    height: 0;
+}
+
+.links {
+    padding-top: .5rem;
+}
+
+.nav {
+    background: transparent;
+    display: flex;
+    top: 0;
+    z-index: 999;
+    transition: all 0.3s;
+}
+
+.nav-scrolled {
+    background-color: black;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    height: 4rem;
+}

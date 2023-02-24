@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.center {
+    margin-top: 1rem;
+    padding-left: .3rem;
+    padding-right: .3rem;
+}
+
+.cards-container {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 3;
+    margin-right: 0;
+    margin-left: o;
+    padding-right: 0;
+    padding-left: 0;
+    column-count: 3;
+}
+
+.individual {
+    padding-top: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    column-span: all;
+    min-width: 450px;
+    max-width: 700px;
+    padding-bottom: 1rem;
+    margin: 2rem;
+    margin-bottom: 3rem;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    margin: .5rem;
+    margin-top: .5rem;
+}
+
+.recipe-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.inline {
+    display: flex;
+}
+
+.card-text {
+    border-left: 6px solid #41BFB3;
+    height: 3.4rem;
+    margin-left: 1rem;
+}
+
+h4 {
+    font-family: Georgia;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.contributor {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+
+/*
+gray-ish mauve: #8C516D
+purple-pink: #D97EB0; 
+medium yellow: #F2CA80
+sand yellow: #F2BF80
+bright warm brown: #BF6836 
+
+bright med mint green: #18D9B5 
+ultra bright mint-green: #9BF2EA 
+light-ish slight blue-green: #41BFB3 
+saturated blue-green: #2A8C82 
+dark purple: #260101 
+dull forest green: #275950
+lighter mint green: #66D9CD 
+dark blue-green: #025159 
+navy blue: #024059
+med mustard yellow: #D9923B 
+dusty med pink: #BF726B 
+dark brick red: #401F1F 
+dark forest green: #075951 
+
+*/

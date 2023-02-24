@@ -1,0 +1,133 @@
+/*
+gray-ish mauve: #8C516D
+purple-pink: #D97EB0; 
+medium yellow: #F2CA80
+sand yellow: #F2BF80
+bright warm brown: #BF6836 
+
+bright med mint green: #18D9B5 
+ultra bright mint-green: #9BF2EA 
+light-ish slight blue-green: #41BFB3 
+saturated blue-green: #2A8C82 
+dark purple: #260101 
+dull forest green: #275950
+lighter mint green: #66D9CD 
+dark blue-green: #025159 
+navy blue: #024059
+med mustard yellow: #D9923B 
+dusty med pink: #BF726B 
+dark brick red: #401F1F 
+dark forest green: #075951 
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Righteous;
+    font-weight: bolder;
+}
+
+
+.hero {
+    width: 100%;
+    height: 100vh;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tagline {
+    text-transform: uppercase;
+    font-family: Sorts Mill Goudy;
+    font-weight: bolder;
+}
+
+.heroText {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.tagline {
+    margin-bottom: 2rem;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+table {
+    table-layout: fixed;
+    width: 60%;
+    margin-top: 2rem;
+}
+
+td {
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+tr {
+    text-align: center;
+}
+
+
+.hero-short {
+    width: 100%;
+    height: 70vh;
+}
+
+.overlay-short {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70vh;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.heroText-short {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.overlay-short-dark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay-short-xtra-dark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70vh;
+    background-color: rgba(0, 0, 0, 0.6);
+}

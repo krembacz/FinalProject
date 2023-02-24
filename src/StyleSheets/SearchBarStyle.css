@@ -1,0 +1,25 @@
+.search {
+    border: 0;
+    border-radius: 10;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin: auto;
+}
+
+.searchInput {
+    border: 0;
+    font-size: 13px;
+    padding: 20px;
+    height: 30px;
+    width: 300px;
+}
+
+.submit {
+    border: none;
+    border-radius: 10;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 100px;
+    background-color: #18D9B5;
+    color: #024059;
+}
