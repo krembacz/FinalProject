@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import Form from 'react-bootstrap/Form';
-import { Button, InputGroup } from 'react-bootstrap';
-import '../StyleSheets/AddRecipeFormStyle.css';
+import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import '../StyleSheets/AddRecipeFormStyle.css';
 
 export default function AddRecipeButton({ addRecipeClick }) {
 
@@ -27,6 +27,7 @@ export default function AddRecipeButton({ addRecipeClick }) {
         navigateNewRecipe();
     }
 
+    //clears forms after submit. Done just in case there is memory on it
     const clearForms = () => {
         setRecipeName("");
         setContributor("");
@@ -38,6 +39,7 @@ export default function AddRecipeButton({ addRecipeClick }) {
         setImage("");
     }
 
+    //navigates to recipes page on click
     let navigate = useNavigate();
     const navigateNewRecipe = () => {
         navigate("/recipes")
