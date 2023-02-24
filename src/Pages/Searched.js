@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { Row } from 'react-bootstrap';
 import '../StyleSheets/HomePageStyle.css';
 import RecipeCard from '../Components/RecipeCard';
@@ -29,7 +29,7 @@ export default function Searched() {
             <div>
                 <div className="center">
                     <Row className="cards-container">
-                        {searchedRecipes.map(recipe => <Link to={'/recipes/' + recipe.id}><RecipeCard recipe={recipe} key={recipe.id} /></Link>)}
+                        {searchedRecipes.map(recipe => <RecipeCard recipe={recipe} key={recipe.id} />)}
                     </Row>
                 </div>
             </div>
