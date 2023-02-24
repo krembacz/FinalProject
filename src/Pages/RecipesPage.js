@@ -1,9 +1,8 @@
 import React from 'react'
 import RecipeCard from '../Components/RecipeCard';
 import { Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import '../StyleSheets/HomePageStyle.css';
 import HeroBannerRecipe from '../Components/HeroBannerRecipe';
+import '../StyleSheets/HomePageStyle.css';
 
 export default function Recipes({ recipeList }) {
     return (
@@ -19,7 +18,3 @@ export default function Recipes({ recipeList }) {
         </div>
     )
 }
-
-{/* <Row className="cards-container">
-{recipeList.map(recipe => <Link to={'/recipes/' + recipe.id}> <RecipeCard recipe={recipe} key={recipe.id} /></Link>)}
-</Row> */}
