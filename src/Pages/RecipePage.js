@@ -1,20 +1,23 @@
 import React, { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
+import { Form, Row } from 'react-bootstrap';
+import { FaEdit, FaTrash } from 'react-icons/fa';
 import HeroBannerIndividual from '../Components/HeroBannerIndividual';
-import '../StyleSheets/RecipePage.css';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import { Form, Row, Col } from 'react-bootstrap';
-import { FaEdit, FaTrash } from 'react-icons/fa';
+import '../StyleSheets/RecipePage.css';
 
 export default function RecipePage({ recipeList, deleteRecipe, submitEditedRecipe, setId }) {
+    //using recipeId as a paraameter to assign correct recipe info to cards
     let { recipeId } = useParams();
     const recipe = recipeList.find(r => r.id === recipeId);
 
+    //modal show and handleshow 
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    //state for the edited recipe - this is an empty object that take input 
     const [editedRecipe, setEditedRecipe] = useState({
         recipename: "",
         contributor: "",
@@ -26,23 +29,24 @@ export default function RecipePage({ recipeList, deleteRecipe, submitEditedRecip
         image: ""
     })
 
-    //handleChange(preptime, e)  
-
+    //takes two parameters, inputToEdit and event. Used spread operator for myobject 
+    //spread out an existing recipe. Edited recipe is an object with the key value pairs that exist in recipe
+    //necessary to have function be unique for each input 
     const handleChange = (inputToEdit, e) => {
         let myObject = { ...editedRecipe }
         myObject[inputToEdit] = e.target.value
-        //spread out an existing recipe. Edited recipe is an object with the key value pairs that exist in recipe
-        //necessary to have function be unique for each input 
         setEditedRecipe(myObject);
         console.log(editedRecipe);
     };
 
+    //takes input from edit forms and uses function in App to PUT changes
     const handleEditedSubmit = (myEditedRecipe) => {
         submitEditedRecipe(myEditedRecipe);
         console.log(recipeList);
         navigateRecipes();
     }
 
+    //navigates to recipes page on click 
     let navigate = useNavigate();
     const navigateRecipes = () => {
         navigate("/recipes");
