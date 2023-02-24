@@ -23,9 +23,9 @@ export default function RecipePage({ recipeList, deleteRecipe, submitEditedRecip
         contributor: "",
         preptime: "",
         totaltime: "",
-        ingredients: [],
+        ingredients: "",
         summary: "",
-        steps: [],
+        steps: "",
         image: ""
     })
 
