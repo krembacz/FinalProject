@@ -1,20 +1,26 @@
 import { Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import Homepage from './Pages/Homepage';
 import RecipesPage from './Pages/RecipesPage';
 import AddRecipePage from './Pages/AddRecipePage';
 import About from './Pages/About';
 import NavigationBar from './Components/NavigationBar';
 import RecipePage from './Pages/RecipePage';
-import { useState, useEffect } from 'react';
 import Searched from './Pages/Searched';
 
 export default function App() {
   const API = "https://63e6e5dd15d793f46f87f0f3.mockapi.io/recipes";
+
+  //will and can set the list of received Recipes from the API 
   const [recipeList, setRecipeList] = useState([]);
+  //will be used to determine ID on forms to target correct API entry
   const [id, setId] = useState("");
+  //featured recipe displayed on the homepage 
   const [featuredRecipe, setFeaturedRecipe] = useState({});
+  //used to determine when to set the featured recipe 
   const [isReady, setIsReady] = useState(null);
 
+  //this is what loads the information from the API - fetches data and sets appropriate states
   useEffect(() => {
     const refreshInfo = async () => {
       const response = await fetch(API);
@@ -26,6 +32,7 @@ export default function App() {
     refreshInfo();
   }, []);
 
+  //second useEFfect to run setting a featured recipe once the page loaded successfully 
   useEffect(() => {
     if (isReady === null) {
       return;
@@ -33,13 +40,16 @@ export default function App() {
     getFeaturedRecipe();
   }, [isReady]);
 
+  //function to determine a random recipe from the recipeList received from API 
   const getFeaturedRecipe = async () => {
     const index = [Math.floor(Math.random() * recipeList.length)]
+    console.log(index)
     const response = await fetch(API + "/" + index)
     const data = await response.json();
     setFeaturedRecipe(data);
   }
 
+  //fetches the API data and sets recipeList without page load 
   const getRecipes = async () => {
     const response = await fetch(API);
     const data = await response.json();
@@ -47,6 +57,7 @@ export default function App() {
     console.log(data);
   };
 
+  //function to POST an entry to the api. String manipulation used to change strings to arrays
   const addRecipeClick = async (newRecipe) => {
     newRecipe.ingredients = newRecipe.ingredients.split(",").map(items => items.trim())
     newRecipe.steps = newRecipe.steps.split(",").map(items => items.trim())
@@ -57,12 +68,15 @@ export default function App() {
       body: JSON.stringify(newRecipe),
       headers: { "Content-Type": "application/json" },
     })
-    console.log(recipeList);
     getRecipes();
+    console.log(recipeList);
   }
 
-
+  //similar to the addRecipeClick except utilizes id to determine which entry in the API to target
   const submitEditedRecipe = async (editedRecipe) => {
+    editedRecipe.ingredients = editedRecipe.ingredients.split(",").map(items => items.trim())
+    editedRecipe.steps = editedRecipe.steps.split(",").map(items => items.trim())
+
     console.log(editedRecipe);
     await fetch(API + "/" + id,
       {
@@ -70,10 +84,11 @@ export default function App() {
         body: JSON.stringify(editedRecipe),
         headers: { "Content-Type": "application/json" },
       })
-    console.log(recipeList);
     getRecipes();
+    console.log(recipeList);
   }
 
+  //deletes a chosen recipe from the api utilizing the recipeId 
   const deleteRecipe = async (recipeId) => {
     const resourceID = (recipeId);
     const response = await fetch(
